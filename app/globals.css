@@ -1,26 +1,209 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-cinzel: var(--font-cinzel-var);
+  --font-cormorant: var(--font-cormorant-var);
+  --font-playfair: var(--font-playfair-var);
+  --font-poppins: var(--font-poppins-var);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ───────────────────────────────────────── */
+/*  BASE RESET & SMOOTH SCROLL               */
+/* ───────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #FAF8F2;
+  color: #2C1810;
+  font-family: var(--font-poppins), sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+/* ───────────────────────────────────────── */
+/*  TYPOGRAPHY HELPERS                       */
+/* ───────────────────────────────────────── */
+.font-cinzel    { font-family: var(--font-cinzel), serif; }
+.font-cormorant { font-family: var(--font-cormorant), serif; }
+.font-playfair  { font-family: var(--font-playfair), serif; }
+.font-poppins   { font-family: var(--font-poppins), sans-serif; }
+
+/* ───────────────────────────────────────── */
+/*  GOLD RULE / DIVIDER                      */
+/* ───────────────────────────────────────── */
+.gold-rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #C9A227, transparent);
+  width: 100%;
+}
+
+.gold-rule-sm {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #C9A227 40%, transparent);
+  width: 60%;
+  margin: 0 auto;
+}
+
+/* ───────────────────────────────────────── */
+/*  SECTION FADE-IN ON SCROLL               */
+/* ───────────────────────────────────────── */
+.section-fade {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.section-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ───────────────────────────────────────── */
+/*  GLASS CARD                               */
+/* ───────────────────────────────────────── */
+.glass-card {
+  background: rgba(255, 249, 240, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(201, 162, 39, 0.25);
+  border-radius: 16px;
+}
+
+/* ───────────────────────────────────────── */
+/*  MANDALA BACKGROUND                       */
+/* ───────────────────────────────────────── */
+.mandala-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0.04;
+}
+
+/* ───────────────────────────────────────── */
+/*  FLOATING PETALS                          */
+/* ───────────────────────────────────────── */
+.petal {
+  position: absolute;
+  top: -30px;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+@keyframes petalFall1 {
+  0%   { transform: translateY(-10px) translateX(0)     rotate(0deg);    opacity: 0; }
+  10%  { opacity: 0.7; }
+  90%  { opacity: 0.5; }
+  100% { transform: translateY(110vh) translateX(100px)  rotate(360deg);  opacity: 0; }
+}
+@keyframes petalFall2 {
+  0%   { transform: translateY(-10px) translateX(0)     rotate(45deg);   opacity: 0; }
+  10%  { opacity: 0.6; }
+  90%  { opacity: 0.4; }
+  100% { transform: translateY(110vh) translateX(-80px)  rotate(-270deg); opacity: 0; }
+}
+@keyframes petalFall3 {
+  0%   { transform: translateY(-10px) translateX(0)     rotate(90deg);   opacity: 0; }
+  10%  { opacity: 0.8; }
+  90%  { opacity: 0.3; }
+  100% { transform: translateY(110vh) translateX(60px)   rotate(180deg);  opacity: 0; }
+}
+@keyframes petalFall4 {
+  0%   { transform: translateY(-10px) translateX(0)     rotate(20deg);   opacity: 0; }
+  10%  { opacity: 0.5; }
+  100% { transform: translateY(110vh) translateX(-120px) rotate(400deg);  opacity: 0; }
+}
+@keyframes petalFall5 {
+  0%   { transform: translateY(-10px) translateX(0)     rotate(-30deg);  opacity: 0; }
+  10%  { opacity: 0.7; }
+  100% { transform: translateY(110vh) translateX(90px)   rotate(-200deg); opacity: 0; }
+}
+
+.petal-anim-1 { animation: petalFall1 12s linear infinite; }
+.petal-anim-2 { animation: petalFall2 15s linear infinite; }
+.petal-anim-3 { animation: petalFall3 10s linear infinite; }
+.petal-anim-4 { animation: petalFall4 18s linear infinite; }
+.petal-anim-5 { animation: petalFall5 13s linear infinite; }
+
+/* ───────────────────────────────────────── */
+/*  COUNTDOWN BOXES                          */
+/* ───────────────────────────────────────── */
+.countdown-box {
+  border: 1px solid rgba(201, 162, 39, 0.4);
+  background: rgba(255, 249, 240, 0.6);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  min-width: 72px;
+  padding: 14px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+@media (min-width: 640px) {
+  .countdown-box {
+    min-width: 88px;
+    padding: 18px 14px;
+  }
+}
+
+/* ───────────────────────────────────────── */
+/*  COUPLE FRAME (ARCH SHAPE)                */
+/* ───────────────────────────────────────── */
+.arch-frame {
+  border-radius: 50% 50% 8px 8px / 60% 60% 8px 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.arch-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 2px solid rgba(201, 162, 39, 0.5);
+  pointer-events: none;
+}
+
+/* ───────────────────────────────────────── */
+/*  SCROLLBAR CUSTOM                         */
+/* ───────────────────────────────────────── */
+::-webkit-scrollbar        { width: 6px; }
+::-webkit-scrollbar-track  { background: #FAF8F2; }
+::-webkit-scrollbar-thumb  { background: #C9A227; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #A07D10; }
+
+/* ───────────────────────────────────────── */
+/*  TYPEWRITER CURSOR                        */
+/* ───────────────────────────────────────── */
+.typewriter-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: #C9A227;
+  margin-left: 3px;
+  vertical-align: text-bottom;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ───────────────────────────────────────── */
+/*  SPIN SLOW FOR MANDALA                    */
+/* ───────────────────────────────────────── */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.spin-slow  { animation: spinSlow 60s linear infinite; }
+.spin-slow-rev { animation: spinSlow 80s linear infinite reverse; }
