@@ -125,59 +125,32 @@ export default function InvitationCover({ onOpen }: InvitationCoverProps) {
               ॐ
             </motion.div>
 
-            {/* Couple photos in arch frames */}
+            {/* Couple Cover photo in arch frame */}
             <motion.div
-              className="flex items-end justify-center gap-5 sm:gap-8 mb-8"
+              className="flex items-center justify-center mb-8"
               initial={{ opacity: 0, scale: 0.92 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
             >
-              {/* Photo 1 */}
-              <div className="relative" style={{ width: 130, height: 172 }}>
+              <div className="relative" style={{ width: 170, height: 230 }}>
+                {/* Outer decorative ring */}
                 <div
-                  className="arch-frame w-full h-full"
-                  style={{
-                    boxShadow: "0 8px 32px rgba(201,162,39,0.3)",
-                    border: "2px solid rgba(201,162,39,0.5)",
-                  }}
-                >
-                  <Image
-                    src="/images/couple1.png"
-                    alt="Athul and Sreelakshmi — photo 1"
-                    fill
-                    className="object-cover object-[center_35%]"
-                    sizes="130px"
-                    priority
-                  />
-                </div>
-                <div
-                  className="absolute inset-0 arch-frame pointer-events-none"
-                  style={{ border: "1px solid rgba(201,162,39,0.35)", borderRadius: "inherit" }}
+                  className="absolute -inset-2 arch-frame pointer-events-none"
+                  style={{ border: "1px solid rgba(201,162,39,0.3)" }}
                 />
-              </div>
-
-              {/* Divider ornament */}
-              <div className="flex flex-col items-center gap-2 mb-2">
-                <div className="w-px h-12 bg-gradient-to-b from-transparent via-soft-gold to-transparent" />
-                <span className="text-soft-gold text-lg" style={{ fontFamily: "serif" }}>❦</span>
-                <div className="w-px h-12 bg-gradient-to-b from-soft-gold via-soft-gold to-transparent" />
-              </div>
-
-              {/* Photo 2 */}
-              <div className="relative" style={{ width: 130, height: 172 }}>
                 <div
-                  className="arch-frame w-full h-full"
+                  className="arch-frame w-full h-full overflow-hidden"
                   style={{
-                    boxShadow: "0 8px 32px rgba(201,162,39,0.3)",
-                    border: "2px solid rgba(201,162,39,0.5)",
+                    boxShadow: "0 12px 40px rgba(201,162,39,0.35)",
+                    border: "2px solid rgba(201,162,39,0.6)",
                   }}
                 >
                   <Image
-                    src="/images/couple2.png"
-                    alt="Athul and Sreelakshmi — photo 2"
+                    src="/images/cover.jpg"
+                    alt="Athul and Sreelakshmi"
                     fill
-                    className="object-cover object-[center_35%]"
-                    sizes="130px"
+                    className="object-cover object-[center_20%]"
+                    sizes="170px"
                     priority
                   />
                 </div>

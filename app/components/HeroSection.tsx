@@ -55,8 +55,8 @@ export default function HeroSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          className="relative w-full max-w-3xl mx-auto mb-10"
-          style={{ aspectRatio: "3/2" }}
+          className="relative w-full max-w-lg sm:max-w-xl mx-auto mb-10"
+          style={{ aspectRatio: "4/5" }}
         >
           {/* Gold border frame */}
           <div
@@ -72,11 +72,11 @@ export default function HeroSection() {
 
           <div className="relative w-full h-full rounded-xl overflow-hidden shadow-elegant-lg">
             <Image
-              src="/images/couple2.png"
-              alt="Athul and Sreelakshmi together"
+              src="/images/cover.jpg"
+              alt="Athul and Sreelakshmi"
               fill
-              className="object-cover object-[center_70%]"
-              sizes="(max-width: 768px) 100vw, 900px"
+              className="object-cover object-[center_20%]"
+              sizes="(max-width: 768px) 100vw, 700px"
               priority
             />
             {/* Gradient overlay at bottom */}

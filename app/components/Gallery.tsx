@@ -79,10 +79,10 @@ export default function Gallery() {
             />
             <div className="relative rounded-xl overflow-hidden shadow-elegant-lg" style={{ aspectRatio: "3/4" }}>
               <Image
-                src="/images/couple1.png"
+                src="/images/cover.jpg"
                 alt="Athul and Sreelakshmi — photo 1"
                 fill
-                className="object-cover object-[center_35%] transition-transform duration-700 hover:scale-105"
+                className="object-cover object-[center_20%] transition-transform duration-700 hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
               {/* Gold gradient overlay at bottom */}
@@ -138,10 +138,10 @@ export default function Gallery() {
                 aria-hidden="true"
               />
               <Image
-                src="/images/couple2.png"
+                src="/images/cover.jpg"
                 alt="Athul and Sreelakshmi — photo 2"
                 fill
-                className="object-cover object-[center_35%] transition-transform duration-700 hover:scale-105"
+                className="object-cover object-[center_30%] transition-transform duration-700 hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
               {/* Gradient overlay */}
