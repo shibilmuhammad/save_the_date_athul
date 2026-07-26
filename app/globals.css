@@ -5,6 +5,19 @@
   --font-cormorant: var(--font-cormorant-var);
   --font-playfair: var(--font-playfair-var);
   --font-poppins: var(--font-poppins-var);
+
+  --color-ivory: #FAF8F2;
+  --color-warm-white: #FFF9F0;
+  --color-soft-gold: #C9A227;
+  --color-deep-gold: #A07D10;
+  --color-champagne: #E8D5A3;
+  --color-light-champagne: #F5EDD4;
+  --color-maroon: #6B1A2A;
+  --color-text-dark: #2C1810;
+  --color-text-mid: #5C4033;
+  --color-text-light: #8B7355;
+  --color-petal-pink: #F2D2C8;
+  --color-lotus-pink: #E8A0A0;
 }
 
 /* ───────────────────────────────────────── */
