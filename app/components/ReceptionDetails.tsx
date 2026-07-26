@@ -11,18 +11,23 @@ function DetailItem({ label, value }: DetailItemProps) {
   return (
     <div className="flex flex-col gap-1">
       <p
-        className="uppercase tracking-widest text-champagne/70"
-        style={{ fontFamily: "var(--font-poppins), sans-serif", fontSize: "0.6rem", letterSpacing: "0.2em" }}
+        className="uppercase tracking-widest"
+        style={{
+          fontFamily: "var(--font-poppins), sans-serif",
+          fontSize: "0.6rem",
+          letterSpacing: "0.2em",
+          color: "rgba(232, 213, 163, 0.7)",
+        }}
       >
         {label}
       </p>
       <p
-        className="text-warm-white"
         style={{
           fontFamily: "var(--font-cormorant), serif",
           fontSize: "clamp(1rem, 2.5vw, 1.2rem)",
           fontWeight: 400,
           lineHeight: 1.4,
+          color: "#FFF9F0",
         }}
       >
         {value}
@@ -53,8 +58,8 @@ export default function ReceptionDetails() {
           {Array.from({ length: 24 }).map((_, i) => {
             const angle = (i * 360) / 24;
             const rad = (angle * Math.PI) / 180;
-            const x = 400 + 360 * Math.cos(rad);
-            const y = 400 + 360 * Math.sin(rad);
+            const x = parseFloat((400 + 360 * Math.cos(rad)).toFixed(3));
+            const y = parseFloat((400 + 360 * Math.sin(rad)).toFixed(3));
             return (
               <ellipse
                 key={i}
@@ -92,8 +97,12 @@ export default function ReceptionDetails() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-champagne uppercase tracking-[0.3em] text-center text-xs mb-4"
-          style={{ fontFamily: "var(--font-poppins), sans-serif", fontWeight: 500 }}
+          className="uppercase tracking-[0.3em] text-center text-xs mb-4"
+          style={{
+            fontFamily: "var(--font-poppins), sans-serif",
+            fontWeight: 500,
+            color: "#E8D5A3",
+          }}
         >
           Join us for
         </motion.p>
@@ -138,8 +147,12 @@ export default function ReceptionDetails() {
           >
             {/* Date large display */}
             <p
-              className="text-champagne mb-2 uppercase tracking-widest"
-              style={{ fontFamily: "var(--font-poppins), sans-serif", fontSize: "0.65rem" }}
+              className="mb-2 uppercase tracking-widest"
+              style={{
+                fontFamily: "var(--font-poppins), sans-serif",
+                fontSize: "0.65rem",
+                color: "#E8D5A3",
+              }}
             >
               Date
             </p>
@@ -172,8 +185,12 @@ export default function ReceptionDetails() {
 
             {/* Time */}
             <p
-              className="text-champagne mb-1 uppercase tracking-widest"
-              style={{ fontFamily: "var(--font-poppins), sans-serif", fontSize: "0.6rem" }}
+              className="mb-1 uppercase tracking-widest"
+              style={{
+                fontFamily: "var(--font-poppins), sans-serif",
+                fontSize: "0.6rem",
+                color: "#E8D5A3",
+              }}
             >
               Time
             </p>

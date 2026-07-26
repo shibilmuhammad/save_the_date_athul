@@ -22,8 +22,8 @@ export default function MandalaBackground({ className = "" }: { className?: stri
         {Array.from({ length: 16 }).map((_, i) => {
           const angle = (i * 360) / 16;
           const rad = (angle * Math.PI) / 180;
-          const x = 400 + 350 * Math.cos(rad);
-          const y = 400 + 350 * Math.sin(rad);
+          const x = parseFloat((400 + 350 * Math.cos(rad)).toFixed(3));
+          const y = parseFloat((400 + 350 * Math.sin(rad)).toFixed(3));
           return (
             <ellipse
               key={`outer-petal-${i}`}
@@ -42,8 +42,8 @@ export default function MandalaBackground({ className = "" }: { className?: stri
         {Array.from({ length: 12 }).map((_, i) => {
           const angle = (i * 360) / 12;
           const rad = (angle * Math.PI) / 180;
-          const x = 400 + 270 * Math.cos(rad);
-          const y = 400 + 270 * Math.sin(rad);
+          const x = parseFloat((400 + 270 * Math.cos(rad)).toFixed(3));
+          const y = parseFloat((400 + 270 * Math.sin(rad)).toFixed(3));
           return (
             <ellipse
               key={`mid-petal-${i}`}
@@ -62,8 +62,8 @@ export default function MandalaBackground({ className = "" }: { className?: stri
         {Array.from({ length: 8 }).map((_, i) => {
           const angle = (i * 360) / 8;
           const rad = (angle * Math.PI) / 180;
-          const x = 400 + 210 * Math.cos(rad);
-          const y = 400 + 210 * Math.sin(rad);
+          const x = parseFloat((400 + 210 * Math.cos(rad)).toFixed(3));
+          const y = parseFloat((400 + 210 * Math.sin(rad)).toFixed(3));
           return (
             <ellipse
               key={`inner-petal-${i}`}
@@ -82,10 +82,10 @@ export default function MandalaBackground({ className = "" }: { className?: stri
         {Array.from({ length: 24 }).map((_, i) => {
           const angle = (i * 360) / 24;
           const rad = (angle * Math.PI) / 180;
-          const x1 = 400 + 100 * Math.cos(rad);
-          const y1 = 400 + 100 * Math.sin(rad);
-          const x2 = 400 + 380 * Math.cos(rad);
-          const y2 = 400 + 380 * Math.sin(rad);
+          const x1 = parseFloat((400 + 100 * Math.cos(rad)).toFixed(3));
+          const y1 = parseFloat((400 + 100 * Math.sin(rad)).toFixed(3));
+          const x2 = parseFloat((400 + 380 * Math.cos(rad)).toFixed(3));
+          const y2 = parseFloat((400 + 380 * Math.sin(rad)).toFixed(3));
           return (
             <line
               key={`line-${i}`}

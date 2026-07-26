@@ -35,7 +35,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Save the Date — Athul & Sreelakshmi | 13 September 2026",
   description:
-    "Join us as we celebrate the wedding of R Athul Krishna & Sreelakshmi Nair. Save the Date — 13 September 2026 at Rubco Auditorium, Kozhikode.",
+    "Join us as we celebrate the wedding of R Athul Krishna & Sreelakshmi Nair. Save the Date — 13 September 2026 at Rubco Auditorium, Kannur.",
   keywords: [
     "Hindu wedding",
     "Save the date",

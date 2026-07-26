@@ -129,7 +129,7 @@ export default function Footer() {
           className="text-soft-gold uppercase tracking-widest text-xs mb-10"
           style={{ fontFamily: "var(--font-poppins), sans-serif" }}
         >
-          13 September 2026 &nbsp;·&nbsp; Kozhikode
+          13 September 2026 &nbsp;·&nbsp; Kannur
         </motion.p>
 
         {/* Stars */}
@@ -176,13 +176,15 @@ function LotusFooterOrnament() {
       {/* Stamens */}
       {[0, 45, 90, 135, 180, 225, 270, 315].map((deg) => {
         const rad = (deg * Math.PI) / 180;
+        const x2 = parseFloat((40 + 6 * Math.cos(rad)).toFixed(3));
+        const y2 = parseFloat((36 + 6 * Math.sin(rad)).toFixed(3));
         return (
           <line
             key={deg}
             x1={40}
             y1={36}
-            x2={40 + 6 * Math.cos(rad)}
-            y2={36 + 6 * Math.sin(rad)}
+            x2={x2}
+            y2={y2}
             stroke="#C9A227"
             strokeWidth="0.6"
             opacity="0.4"
