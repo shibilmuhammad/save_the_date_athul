@@ -56,9 +56,9 @@ export const metadata: Metadata = {
     locale: "en_IN",
     images: [
       {
-        url: "/opengraph-image.png",
-        width: 1200,
-        height: 630,
+        url: "/opengraph-image.jpg",
+        width: 600,
+        height: 800,
         alt: "Athul & Sreelakshmi Save the Date",
       },
     ],
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     title: "Save the Date — Athul & Sreelakshmi",
     description:
       "Together with our families, we warmly invite you to celebrate our wedding on 13 September 2026.",
-    images: ["/opengraph-image.png"],
+    images: ["/opengraph-image.jpg"],
   },
 };
 

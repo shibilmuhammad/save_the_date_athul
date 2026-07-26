@@ -55,13 +55,15 @@ export default function InvitationCover({ onOpen }: InvitationCoverProps) {
         aria-hidden="true"
       />
 
-      {/* ── PHASE 1: LINE REVEAL ── */}
-      <AnimatePresence>
-        {phase === "reveal" && (
+      {/* ── COVERS STAGES ── */}
+      <AnimatePresence mode="wait">
+        {phase === "reveal" ? (
           <motion.div
+            key="reveal"
             className="relative z-10 flex flex-col items-center text-center px-6 max-w-xl"
             initial={{ opacity: 1 }}
-            exit={{ opacity: 0, transition: { duration: 0.7 } }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
           >
             {/* Om symbol */}
             <motion.div
@@ -103,17 +105,13 @@ export default function InvitationCover({ onOpen }: InvitationCoverProps) {
               ))}
             </div>
           </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* ── PHASE 2: INVITATION ── */}
-      <AnimatePresence>
-        {phase === "invitation" && (
+        ) : (
           <motion.div
+            key="invitation"
             className="relative z-10 flex flex-col items-center text-center px-6 w-full max-w-2xl"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
             {/* Om symbol */}
             <motion.div
