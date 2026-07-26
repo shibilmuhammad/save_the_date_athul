@@ -82,7 +82,7 @@ export default function Gallery() {
                 src="/images/couple1.png"
                 alt="Athul and Sreelakshmi — photo 1"
                 fill
-                className="object-cover object-top transition-transform duration-700 hover:scale-105"
+                className="object-cover object-[center_35%] transition-transform duration-700 hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
               {/* Gold gradient overlay at bottom */}
@@ -141,7 +141,7 @@ export default function Gallery() {
                 src="/images/couple2.png"
                 alt="Athul and Sreelakshmi — photo 2"
                 fill
-                className="object-cover object-top transition-transform duration-700 hover:scale-105"
+                className="object-cover object-[center_35%] transition-transform duration-700 hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
               {/* Gradient overlay */}

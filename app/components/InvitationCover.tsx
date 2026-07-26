@@ -147,7 +147,7 @@ export default function InvitationCover({ onOpen }: InvitationCoverProps) {
                     src="/images/couple1.png"
                     alt="Athul and Sreelakshmi — photo 1"
                     fill
-                    className="object-cover object-top"
+                    className="object-cover object-[center_35%]"
                     sizes="130px"
                     priority
                   />
@@ -178,7 +178,7 @@ export default function InvitationCover({ onOpen }: InvitationCoverProps) {
                     src="/images/couple2.png"
                     alt="Athul and Sreelakshmi — photo 2"
                     fill
-                    className="object-cover object-top"
+                    className="object-cover object-[center_35%]"
                     sizes="130px"
                     priority
                   />

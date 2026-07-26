@@ -75,7 +75,7 @@ export default function HeroSection() {
               src="/images/couple2.png"
               alt="Athul and Sreelakshmi together"
               fill
-              className="object-cover object-top"
+              className="object-cover object-[center_70%]"
               sizes="(max-width: 768px) 100vw, 900px"
               priority
             />
