@@ -32,7 +32,12 @@ const poppins = Poppins({
   display: "swap",
 });
 
+const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+  : "http://localhost:3000";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Save the Date — Athul & Sreelakshmi | 13 September 2026",
   description:
     "Join us as we celebrate the wedding of R Athul Krishna & Sreelakshmi Nair. Save the Date — 13 September 2026 at Rubco Auditorium, Kannur.",
@@ -51,6 +56,21 @@ export const metadata: Metadata = {
       "Together with our families, we warmly invite you to celebrate our wedding on 13 September 2026.",
     type: "website",
     locale: "en_IN",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Athul & Sreelakshmi Save the Date",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Save the Date — Athul & Sreelakshmi",
+    description:
+      "Together with our families, we warmly invite you to celebrate our wedding on 13 September 2026.",
+    images: ["/opengraph-image.png"],
   },
 };
 
