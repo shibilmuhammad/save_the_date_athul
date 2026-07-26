@@ -138,10 +138,10 @@ export default function Gallery() {
                 aria-hidden="true"
               />
               <Image
-                src="/images/cover.jpg"
+                src="/images/story2.jpg"
                 alt="Athul and Sreelakshmi — photo 2"
                 fill
-                className="object-cover object-[center_30%] transition-transform duration-700 hover:scale-105"
+                className="object-cover object-[center_25%] transition-transform duration-700 hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
               {/* Gradient overlay */}

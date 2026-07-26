@@ -55,7 +55,7 @@ export default function HeroSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          className="relative w-full max-w-lg sm:max-w-xl mx-auto mb-10"
+          className="relative w-full max-w-md sm:max-w-lg mx-auto mb-8"
           style={{ aspectRatio: "4/5" }}
         >
           {/* Gold border frame */}
@@ -76,59 +76,55 @@ export default function HeroSection() {
               alt="Athul and Sreelakshmi"
               fill
               className="object-cover object-[center_20%]"
-              sizes="(max-width: 768px) 100vw, 700px"
+              sizes="(max-width: 768px) 100vw, 600px"
               priority
             />
-            {/* Gradient overlay at bottom */}
-            <div
-              className="absolute inset-0"
-              style={{
-                background:
-                  "linear-gradient(to top, rgba(250,248,242,0.85) 0%, transparent 40%)",
-              }}
-            />
           </div>
+        </motion.div>
 
-          {/* Names overlay on the image */}
-          <div className="absolute bottom-0 left-0 right-0 z-20 flex flex-col items-center pb-6 sm:pb-8">
-            <h1
-              className="text-text-dark"
-              style={{
-                fontFamily: "var(--font-cinzel), serif",
-                fontSize: "clamp(1.3rem, 4.5vw, 2.8rem)",
-                letterSpacing: "0.12em",
-                fontWeight: 400,
-                lineHeight: 1.3,
-                textShadow: "0 2px 12px rgba(250,248,242,0.8)",
-              }}
-            >
-              R Athul Krishna
-            </h1>
-            <p
-              className="text-soft-gold my-1"
-              style={{
-                fontFamily: "var(--font-cormorant), serif",
-                fontSize: "clamp(1.4rem, 4vw, 2.2rem)",
-                fontStyle: "italic",
-              }}
-              aria-label="and"
-            >
-              ❤
-            </p>
-            <h1
-              className="text-text-dark"
-              style={{
-                fontFamily: "var(--font-cinzel), serif",
-                fontSize: "clamp(1.3rem, 4.5vw, 2.8rem)",
-                letterSpacing: "0.12em",
-                fontWeight: 400,
-                lineHeight: 1.3,
-                textShadow: "0 2px 12px rgba(250,248,242,0.8)",
-              }}
-            >
-              Sreelakshmi Nair
-            </h1>
-          </div>
+        {/* Names below the image — clear & elegant */}
+        <motion.div
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="flex flex-col items-center mb-8"
+        >
+          <h1
+            className="text-text-dark text-center"
+            style={{
+              fontFamily: "var(--font-cinzel), serif",
+              fontSize: "clamp(1.5rem, 4.5vw, 2.6rem)",
+              letterSpacing: "0.12em",
+              fontWeight: 400,
+              lineHeight: 1.3,
+            }}
+          >
+            R ATHUL KRISHNA
+          </h1>
+          <p
+            className="text-soft-gold my-1"
+            style={{
+              fontFamily: "var(--font-cormorant), serif",
+              fontSize: "clamp(1.3rem, 3.5vw, 1.8rem)",
+              fontStyle: "italic",
+            }}
+            aria-label="and"
+          >
+            ❤
+          </p>
+          <h1
+            className="text-text-dark text-center"
+            style={{
+              fontFamily: "var(--font-cinzel), serif",
+              fontSize: "clamp(1.5rem, 4.5vw, 2.6rem)",
+              letterSpacing: "0.12em",
+              fontWeight: 400,
+              lineHeight: 1.3,
+            }}
+          >
+            SREELAKSHMI NAIR
+          </h1>
         </motion.div>
 
         {/* Quote */}
