@@ -89,7 +89,7 @@ export default function Footer() {
               lineHeight: 1.8,
             }}
           >
-            Sreelakshmi Nair
+            Sreelakshmi M Nair
           </p>
         </motion.div>
 

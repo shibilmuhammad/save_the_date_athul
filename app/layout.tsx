@@ -38,12 +38,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Save the Date — Athul & Sreelakshmi | 13 September 2026",
   description:
-    "Join us as we celebrate the wedding of R Athul Krishna & Sreelakshmi Nair. Save the Date — 13 September 2026 at Rubco Auditorium, Kannur.",
+    "Join us as we celebrate the wedding of R Athul Krishna & Sreelakshmi M Nair. Save the Date — 13 September 2026 at Rubco Auditorium, Kannur.",
   keywords: [
     "Hindu wedding",
     "Save the date",
     "Athul Krishna",
-    "Sreelakshmi Nair",
+    "Sreelakshmi M Nair",
     "Kerala wedding",
     "Indian wedding invitation",
     "September 2026 wedding",

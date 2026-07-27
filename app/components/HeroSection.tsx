@@ -123,7 +123,7 @@ export default function HeroSection() {
               lineHeight: 1.3,
             }}
           >
-            SREELAKSHMI NAIR
+            SREELAKSHMI M NAIR
           </h1>
         </motion.div>
 

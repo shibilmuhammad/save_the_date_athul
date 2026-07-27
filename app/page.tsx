@@ -5,7 +5,6 @@ import InvitationCover from "./components/InvitationCover";
 import HeroSection from "./components/HeroSection";
 import WeddingDetails from "./components/WeddingDetails";
 import ReceptionDetails from "./components/ReceptionDetails";
-import Gallery from "./components/Gallery";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -30,9 +29,6 @@ export default function Home() {
 
       {/* Reception */}
       <ReceptionDetails />
-
-      {/* Gallery */}
-      <Gallery />
 
       {/* Footer */}
       <Footer />

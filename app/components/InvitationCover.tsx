@@ -206,7 +206,7 @@ export default function InvitationCover({ onOpen }: InvitationCoverProps) {
                   lineHeight: 1.6,
                 }}
               >
-                Sreelakshmi Nair
+                Sreelakshmi M Nair
               </h1>
             </motion.div>
 
