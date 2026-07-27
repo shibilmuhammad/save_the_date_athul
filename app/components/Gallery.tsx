@@ -79,8 +79,8 @@ export default function Gallery() {
             />
             <div className="relative rounded-xl overflow-hidden shadow-elegant-lg" style={{ aspectRatio: "3/4" }}>
               <Image
-                src="/images/cover.jpg"
-                alt="Athul and Sreelakshmi — photo 1"
+                src="/images/story1.jpg"
+                alt="Athul and Sreelakshmi"
                 fill
                 className="object-cover object-[center_20%] transition-transform duration-700 hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -139,9 +139,9 @@ export default function Gallery() {
               />
               <Image
                 src="/images/story2.jpg"
-                alt="Athul and Sreelakshmi — photo 2"
+                alt="Athul and Sreelakshmi — holding hands"
                 fill
-                className="object-cover object-[center_25%] transition-transform duration-700 hover:scale-105"
+                className="object-cover object-center transition-transform duration-700 hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
               {/* Gradient overlay */}
@@ -188,7 +188,7 @@ export default function Gallery() {
                 className="text-soft-gold uppercase tracking-widest mb-2"
                 style={{ fontFamily: "var(--font-poppins), sans-serif", fontSize: "0.58rem" }}
               >
-                Athul &amp; Sreelakshmi
+                Athul &amp; Sreelakshmi M Nair
               </p>
               <p
                 className="text-text-mid"
