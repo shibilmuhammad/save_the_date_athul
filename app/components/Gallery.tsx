@@ -59,25 +59,24 @@ export default function Gallery() {
           className="gold-rule-sm mb-14"
         />
 
-        {/* Gallery grid — staggered asymmetric layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
-          {/* Photo 1 — taller card with quote */}
+        {/* Gallery grid — 3 photo layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start mb-8">
+          {/* Photo 1 — Standing together by Thar */}
           <motion.div
             initial={{ opacity: 0, y: 32, rotate: -1 }}
             whileInView={{ opacity: 1, y: 0, rotate: -1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.9, ease: "easeOut" }}
             whileHover={{ scale: 1.02, rotate: 0 }}
-            className="relative md:mt-8 cursor-default"
+            className="relative md:mt-4 cursor-default"
             style={{ transformOrigin: "center" }}
           >
-            {/* Outer border */}
-            <div
-              className="absolute -inset-3 rounded-2xl pointer-events-none"
-              style={{ border: "1px solid rgba(201,162,39,0.2)" }}
-              aria-hidden="true"
-            />
             <div className="relative rounded-xl overflow-hidden shadow-elegant-lg" style={{ aspectRatio: "3/4" }}>
+              <div
+                className="absolute -inset-3 rounded-2xl pointer-events-none z-10"
+                style={{ border: "1px solid rgba(201,162,39,0.2)" }}
+                aria-hidden="true"
+              />
               <Image
                 src="/images/story1.jpg"
                 alt="Athul and Sreelakshmi"
@@ -86,8 +85,6 @@ export default function Gallery() {
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
-
-            {/* Gold corner accent */}
             <div
               className="absolute top-3 left-3 pointer-events-none"
               style={{ opacity: 0.5 }}
@@ -97,19 +94,51 @@ export default function Gallery() {
             </div>
           </motion.div>
 
-          {/* Photo 2 — slightly lower with decorative text panel */}
+          {/* Photo 2 — Leaning on shoulder (New photo) */}
           <motion.div
             initial={{ opacity: 0, y: 32, rotate: 1 }}
             whileInView={{ opacity: 1, y: 0, rotate: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.35, duration: 0.9, ease: "easeOut" }}
             whileHover={{ scale: 1.02, rotate: 0 }}
-            className="relative flex flex-col gap-6 cursor-default"
+            className="relative cursor-default"
             style={{ transformOrigin: "center" }}
           >
-            {/* Main photo */}
             <div className="relative rounded-xl overflow-hidden shadow-elegant-lg" style={{ aspectRatio: "3/4" }}>
-              {/* Outer border */}
+              <div
+                className="absolute -inset-3 rounded-2xl pointer-events-none z-10"
+                style={{ border: "1px solid rgba(201,162,39,0.2)" }}
+                aria-hidden="true"
+              />
+              <Image
+                src="/images/story3.jpg"
+                alt="Athul and Sreelakshmi together"
+                fill
+                className="object-cover object-[center_20%] transition-transform duration-700 hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <div
+                className="absolute top-3 right-3 pointer-events-none rotate-90"
+                style={{ opacity: 0.5 }}
+                aria-hidden="true"
+              >
+                <CornerAccent />
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Photo 3 & Quote Card Row */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
+          {/* Photo 3 — Close up holding hands */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="relative cursor-default"
+          >
+            <div className="relative rounded-xl overflow-hidden shadow-elegant-lg" style={{ aspectRatio: "4/3" }}>
               <div
                 className="absolute -inset-3 rounded-2xl pointer-events-none z-10"
                 style={{ border: "1px solid rgba(201,162,39,0.2)" }}
@@ -122,50 +151,41 @@ export default function Gallery() {
                 className="object-cover object-center transition-transform duration-700 hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
-
-              {/* Gold corner accent top-right */}
-              <div
-                className="absolute top-3 right-3 pointer-events-none rotate-90"
-                style={{ opacity: 0.5 }}
-                aria-hidden="true"
-              >
-                <CornerAccent />
-              </div>
             </div>
+          </motion.div>
 
-            {/* Floating quote card below photo 2 */}
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5, duration: 0.7 }}
-              className="glass-card px-6 py-5 text-center"
+          {/* Floating quote card */}
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.5, duration: 0.7 }}
+            className="glass-card px-6 py-8 text-center"
+          >
+            <p
+              className="text-soft-gold uppercase tracking-widest mb-3"
+              style={{ fontFamily: "var(--font-poppins), sans-serif", fontSize: "0.62rem" }}
             >
-              <p
-                className="text-soft-gold uppercase tracking-widest mb-2"
-                style={{ fontFamily: "var(--font-poppins), sans-serif", fontSize: "0.58rem" }}
-              >
-                Athul &amp; Sreelakshmi M Nair
-              </p>
-              <p
-                className="text-text-mid"
-                style={{
-                  fontFamily: "var(--font-cormorant), serif",
-                  fontSize: "clamp(0.95rem, 2.5vw, 1.1rem)",
-                  fontStyle: "italic",
-                  lineHeight: 1.6,
-                }}
-              >
-                Two souls, one destiny — bound by love and blessed by family.
-              </p>
-              <div className="gold-rule-sm mt-4" />
-              <p
-                className="text-text-light mt-3"
-                style={{ fontFamily: "var(--font-cormorant), serif", fontSize: "0.9rem", fontStyle: "italic" }}
-              >
-                13 September 2026
-              </p>
-            </motion.div>
+              Athul &amp; Sreelakshmi M Nair
+            </p>
+            <p
+              className="text-text-mid"
+              style={{
+                fontFamily: "var(--font-cormorant), serif",
+                fontSize: "clamp(1rem, 2.5vw, 1.2rem)",
+                fontStyle: "italic",
+                lineHeight: 1.6,
+              }}
+            >
+              Two souls, one destiny — bound by love and blessed by family.
+            </p>
+            <div className="gold-rule-sm mt-5" />
+            <p
+              className="text-text-light mt-4"
+              style={{ fontFamily: "var(--font-cormorant), serif", fontSize: "0.95rem", fontStyle: "italic" }}
+            >
+              13 September 2026
+            </p>
           </motion.div>
         </div>
       </div>
