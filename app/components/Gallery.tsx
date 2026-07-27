@@ -85,28 +85,6 @@ export default function Gallery() {
                 className="object-cover object-[center_20%] transition-transform duration-700 hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
-              {/* Gold gradient overlay at bottom */}
-              <div
-                className="absolute inset-0 pointer-events-none"
-                style={{
-                  background:
-                    "linear-gradient(to top, rgba(44,24,16,0.65) 0%, rgba(44,24,16,0.1) 40%, transparent 70%)",
-                }}
-              />
-              {/* Caption */}
-              <div className="absolute bottom-0 left-0 right-0 px-6 py-6 z-10">
-                <p
-                  className="text-warm-white text-center"
-                  style={{
-                    fontFamily: "var(--font-cormorant), serif",
-                    fontSize: "clamp(0.9rem, 2.5vw, 1.15rem)",
-                    fontStyle: "italic",
-                    opacity: 0.92,
-                  }}
-                >
-                  &ldquo;Every love story is beautiful,<br />but ours is my favourite.&rdquo;
-                </p>
-              </div>
             </div>
 
             {/* Gold corner accent */}
@@ -144,27 +122,6 @@ export default function Gallery() {
                 className="object-cover object-center transition-transform duration-700 hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
-              {/* Gradient overlay */}
-              <div
-                className="absolute inset-0 pointer-events-none"
-                style={{
-                  background:
-                    "linear-gradient(to top, rgba(44,24,16,0.65) 0%, rgba(44,24,16,0.05) 35%, transparent 60%)",
-                }}
-              />
-              <div className="absolute bottom-0 left-0 right-0 px-6 py-6 z-10">
-                <p
-                  className="text-warm-white text-center"
-                  style={{
-                    fontFamily: "var(--font-cormorant), serif",
-                    fontSize: "clamp(0.9rem, 2.5vw, 1.15rem)",
-                    fontStyle: "italic",
-                    opacity: 0.92,
-                  }}
-                >
-                  &ldquo;In all the world, there is no heart<br />for me like yours.&rdquo;
-                </p>
-              </div>
 
               {/* Gold corner accent top-right */}
               <div
